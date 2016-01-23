@@ -20,12 +20,12 @@ description: "Programming with designment and life"
             </div>
           </a>
           <p class="post-meta">
-            Written by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.data | data: "%B %-d, %Y" }}
+            Written by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
           </p>
         </div>
 
         <!--add thumbnail feature by BING-->
-        {% if featured_thumbnail %}
+        {% if featured-thumbnail %}
         <div class="col-lg-3 col-md-3 col-xs-12">
             <div class="thumb">
                <img src="{{ site.baseurl }}/img/{% if post.header-img %}{{ post.header-img }}{% endif %}">

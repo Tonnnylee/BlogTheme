@@ -73,7 +73,7 @@ featured-condition-size: 0              # A tag will be featured if the size of 
 featured-notes: true
 
 # featured thumbnail
-featured_thumbnail: true
+featured-thumbnail: true                #whether or not using featured-thumbnail
 
 #Friends
 friends: [

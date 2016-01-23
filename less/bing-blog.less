@@ -386,7 +386,7 @@ pre code{
 	}
 	@media only screen and (max-width: 480px){
 		/*make background-img responsive, added by BING*/
-		background-size: 610px 343px;
+		background-size: 620px;
 	}
     #index-wrapper{
     	position: relative;
@@ -540,7 +540,9 @@ pre code{
 
 .thumb{
 	> img{
+	   @media only screen and (min-width:768px){
 	   margin-top:50px;   //hack to make img middle,it is bad method 
+	   }
 	   border-radius:2px;
 	   width:360px;
     }

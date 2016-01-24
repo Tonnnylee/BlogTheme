@@ -23,6 +23,7 @@ description: "Programming with designment and life"
           <p class="post-meta">
             Written by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
           </p>
+          <a class="post-more" href="{{ post.url | prepend: site.baseurl }}">READ MORE</a>
         </div>
 
         <!--add thumbnail feature by BING-->      

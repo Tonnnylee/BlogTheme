@@ -8,6 +8,7 @@ header-img: "img/home-bg-o.jpg"
 thumb-img:  "img/thumbnail/street-th.jpg"
 tags:
     - 生活
+post-permission: true
 ---
 
 > “Yeah It's on. ”

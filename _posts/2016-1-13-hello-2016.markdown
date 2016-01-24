@@ -9,7 +9,7 @@ thumb-img:       "img/thumbnail/exercise-th.jpg"
 tags:
     - 生活
 ---
-post-permisstion: true
+post-permission: true
 
 > 好吧，2016年终于开通了自己的blog
 

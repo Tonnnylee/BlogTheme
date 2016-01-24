@@ -23,7 +23,7 @@ facebook_username:  zhibingpro
 # Build settings
 highlighter: pygments
 permalink: pretty
-paginate: 9
+paginate: 5
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
@@ -78,22 +78,22 @@ featured-thumbnail: true                #whether or not using featured-thumbnail
 #Friends
 friends: [
     {
-        title: "天镶的博客",
-        href: "http://lingyu.wang/"
+        title: "friend1的博客",
+        href: "#"
     },{
-        title: "Luke的自留地",
-        href: "http://hmqk1995.github.io"
+        title: "friend2的博客",
+        href: "#"
     },{
-        title: "SmdCn's Blog",
-        href: "http://blog.smdcn.net"
+        title: "friend3的博客",
+        href: "#"
     },{
-        title: "解旻的博客",
-        href: "http://xieminis.me/"
+        title: "friend4的博客",
+        href: "#"
     },{
-        title: "DHong Say",
-        href: "http://dhong.co"
+        title: "friend5的博客",
+        href: "#"
     },{
-        title: "尹峰以为",
-        href: "http://ingf.github.io/"
+        title: "friend6的博客",
+        href: "#"
     }
 ]

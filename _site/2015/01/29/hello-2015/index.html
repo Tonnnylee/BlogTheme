@@ -96,7 +96,7 @@
   <!--Post Header-->
 <style type="text/css">
 	header.intro-header{
-		background-image: url('/BlogTheme/img/post-bg-2015.jpg')
+		background-image: url('/BlogTheme/img/home-bg-o.jpg')
 	}
 </style>
 <header class="intro-header">
@@ -140,66 +140,44 @@
 
 <h2 id="section">前言</h2>
 
-<p>Hux 的 Blog 就这么开通了。</p>
-
-<p><a href="#build">跳过废话，直接看技术实现 </a></p>
-
-<p>2015 年，Hux 总算有个地方可以好好写点东西了。</p>
-
-<p>作为一个程序员， Blog 这种轮子要是挂在大众博客程序上就太没意思了。一是觉得大部分 Blog 服务都太丑，二是觉得不能随便定制不好玩。之前因为太懒没有折腾，结果就一直连个写 Blog 的地儿都没有。</p>
-
-<p>在玩了一段时间知乎之后，答题的快感又激起了我开博客的冲动。之前的<a href="http://huangxuan.me/portfolio">个人网站</a>是作品集形式的（现在集成进来了），并不适合用来写博文，一不做二不休，花一天搞一个吧！</p>
+<p>Blog 就这么开通了。</p>
 
 <p id="build"></p>
 <hr />
 
 <h2 id="section-1">正文</h2>
 
-<p>接下来说说搭建这个博客的技术细节。</p>
+<p>” It comes down to this,” said Hermione, rubbing her forehead. “Either Mr. Crouch attacked Viktor, or somebody else attacked both of them when Viktor wasn’t looking.”</p>
 
-<p>正好之前就有关注过 <a href="https://pages.github.com/">GitHub Pages</a> + <a href="http://jekyllrb.com/">Jekyll</a> 快速 Building Blog 的技术方案，非常轻松时尚。</p>
+<p>“It must’ve been Crouch,” said Ron at once. “That’s why he was gone when Harry and Dumbledore got there. He’d done a runner.”</p>
 
-<p>其优点非常明显：</p>
+<p>“I don’t think so,” said Harry, shaking his head. “He seemed really weak - I don’t reckon he was up to Disapparating or anything.”</p>
 
-<ul>
-  <li><strong>Markdown</strong> 带来的优雅写作体验</li>
-  <li>非常熟悉的 Git workflow ，<strong>Git Commit 即 Blog Post</strong></li>
-  <li>利用 GitHub Pages 的域名和免费无限空间，不用自己折腾主机
-    <ul>
-      <li>如果需要自定义域名，也只需要简单改改 DNS 加个 CNAME 就好了</li>
-    </ul>
-  </li>
-  <li>Jekyll 的自定制非常容易，基本就是个模版引擎</li>
-</ul>
+<p>“You cant Disapparate on the Hogwarts grounds, haven’t I told you enough times?” said Hermione.</p>
 
-<p>本来觉得最大的缺点可能是 GitHub 在国内访问起来太慢，所以第二天一起床就到 GitCafe(Chinese GitHub Copy) 迁移了一个<a href="http://huxpro.gitcafe.io">镜像</a>出来，结果还是巨慢。</p>
+<p>“Okay. . . hows this for a theory,” said Ron excitedly. “Krum attacked Crouch - no, wait for it - and then Stunned himself!”</p>
 
-<p>哥哥可是个前端好嘛！ 果断开 Chrome DevTool 查了下网络请求，原来是 <strong>pending 在了 Google Fonts</strong> 上，页面渲染一直被阻塞到请求超时为止，难怪这么慢。  <br />
-忍痛割爱，只好把 Web Fonts 去了（反正超时看到的也只能是 fallback ），果然一下就正常了，而且 GitHub 和 GitCafe 对比并没有感受到明显的速度差异，虽然 github 的 ping 值明显要高一些，达到了 300ms，于是用 DNSPOD 优化了一下速度。</p>
+<p>“And Mr. Crouch evaporated, did he?” said Hermione coldly.</p>
 
-<hr />
+<p>“Oh yeah . . .”</p>
 
-<p>配置的过程中也没遇到什么坑，基本就是 Git 的流程，相当顺手</p>
+<p>It was daybreak. Harry, Ron, and Hermione had crept out of their dormitories very early and hurried up to the Owlery together to send a note to Sirius. Now they were standing looking out at the misty grounds. All three of them were puffy-eyed and pale because they had been talking late into the night about Mr. Crouch.</p>
 
-<p>大的 Jekyll 主题上直接 fork 了 Clean Blog（这个主题也相当有名，就不多赘述了。唯一的缺点大概就是没有标签支持，于是我给它补上了。）</p>
+<p>“照这样说，”赫敏揉着额头说，“不是克劳奇袭击了威克多尔，就是什么趁威克多尔不注意时袭击了他们俩。”</p>
 
-<p>本地调试环境需要 <code>gem install jekyll</code>，结果 rubygem 的源居然被墙了……后来手动改成了我大淘宝的镜像源才成功</p>
+<p>“肯定是克劳奇，”罗恩马上说，“所以哈利和邓布利多赶到那儿时他已经不见了。溜得够快的。”</p>
 
-<p>Theme 的 CSS 是基于 Bootstrap 定制的，看得不爽的地方直接在 Less 里改就好了（平时更习惯 SCSS 些），<strong>不过其实我一直觉得 Bootstrap 在移动端的体验做得相当一般，比我在淘宝参与的团队 CSS 框架差多了……</strong>所以为了体验，也补了不少 CSS 进去</p>
+<p>“我想不会，”哈利摇了摇头说，“他看上去很虚弱——我不认为他能幻影移形什么的。”</p>
 
-<p>最后就进入了耗时反而最长的<strong>做图、写字</strong>阶段，也算是进入了<strong>写博客</strong>的正轨，因为是类似 Hack Day 的方式去搭这个站的，所以折腾折腾着大半夜就过去了。</p>
+<p>“你不可能在霍格沃茨地场地上幻影移形，我跟你讲过多少遍了?”赫敏说道。</p>
 
-<p>第二天考虑中文字体的渲染，fork 了 <a href="http://www.typeisbeautiful.com/">Type is Beautiful</a> 的 <code>font</code> CSS，调整了字号，适配了 Win 的渣渲染，中英文混排效果好多了。</p>
+<p>“哎……会不会是这样，”罗恩兴奋地说道，“克鲁姆袭击了克劳奇——嗯——然后给他自己念了个昏迷咒!”</p>
 
-<h2 id="section-2">后记</h2>
+<p>“然后克劳奇先生变成蒸气挥发了，是不是?”赫敏冷冷地说。</p>
 
-<p>回顾这个博客的诞生，纯粹是出于个人兴趣。在知乎相关问题上回答并获得一定的 star 后，我决定把这个博客主题当作一个小小的开源项目来维护。</p>
+<p>“啊，这个……”</p>
 
-<p>在经历 v1.0 - v1.5 的蜕变后，这个博客主题愈发完整，不但增加了诸多 UI 层的优化（opinionated）；在代码层面，更加丰富的配置项也使得这个主题拥有了更好的灵活性与可拓展性。而作为一个开源项目，我也积极的为其完善文档与解决 issue。</p>
-
-<p>如果你恰好逛到了这里，希望你也能喜欢这个博客主题。</p>
-
-<p>—— Hux 后记于 2015.10</p>
+<p>天刚放亮，哈利、罗恩和赫敏一大早就溜出宿舍，急忙跑到猫头鹰棚屋给小天狼星发信。现在他们站在那里眺望着雾蒙蒙的场地，三个人都眼皮浮肿，脸色苍白，因为他们昨天夜里为克劳奇先生的事讨论到很晚。</p>
 
 
 			
@@ -213,18 +191,21 @@
                     data-thread-key="/2015/01/29/hello-2015"
                     data-title="Hello 2015"
                     data-url="http://Tonnnylee.github.io/BlogTheme/BlogTheme/2015/01/29/hello-2015/"
-                    data-images="http://Tonnnylee.github.io/BlogTheme/BlogTheme/img/post-bg-2015.jpg"
+                    data-images="http://Tonnnylee.github.io/BlogTheme/BlogTheme/img/home-bg-o.jpg"
                     data-content="
   “Yeah It’s on. ”
 
 
 前言
 
-Hux 的 Blog 就这么开通了。
+Blog 就这么开通了。
 
-跳过废话，直接看技术实现 
 
-2015 年，Hux 总算有个地... | 志兵的博客 | BING blog " >
+
+
+正文
+
+” It comes down to this,” said... | 志兵的博客 | BING blog " >
                     <div class="ds-share-inline">
                       <ul  class="ds-share-icons-16">
                         <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
@@ -245,7 +226,7 @@ Hux 的 Blog 就这么开通了。
                     
                     
                     <li class="next">
-                        <a href="/BlogTheme/2015/03/31/e2e_user_scenarios/" data-toggle="tooltip" data-placement="top" title="Definition of End to End User Scenarios">Next Post &rarr;</a>
+                        <a href="/BlogTheme/js/2015/05/25/js-module-loader/" data-toggle="tooltip" data-placement="top" title="[转载]JavaScript Module Loader">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -279,80 +260,26 @@ Hux 的 Blog 就这么开通了。
                     <div class="tags">
         				
                             
-                				<a href="/tags/#生活" title="生活" rel="3">
+                				<a href="/tags/#生活" title="生活" rel="2">
                                     生活
                                 </a>
                             
         				
                             
-                				<a href="/tags/#交互设计" title="交互设计" rel="1">
-                                    交互设计
-                                </a>
-                            
-        				
-                            
-                				<a href="/tags/#English-only" title="English-only" rel="1">
-                                    English-only
-                                </a>
-                            
-        				
-                            
-                				<a href="/tags/#UX Design" title="UX Design" rel="3">
-                                    UX Design
-                                </a>
-                            
-        				
-                            
-                				<a href="/tags/#OS" title="OS" rel="2">
-                                    OS
-                                </a>
-                            
-        				
-                            
-                				<a href="/tags/#Unix" title="Unix" rel="1">
-                                    Unix
-                                </a>
-                            
-        				
-                            
-                				<a href="/tags/#Linux" title="Linux" rel="1">
-                                    Linux
-                                </a>
-                            
-        				
-                            
-                				<a href="/tags/#hUX 随想录" title="hUX 随想录" rel="1">
-                                    hUX 随想录
-                                </a>
-                            
-        				
-                            
-                				<a href="/tags/#Windows" title="Windows" rel="1">
-                                    Windows
-                                </a>
-                            
-        				
-                            
-                				<a href="/tags/#Metro" title="Metro" rel="1">
-                                    Metro
-                                </a>
-                            
-        				
-                            
-                				<a href="/tags/#阿里巴巴" title="阿里巴巴" rel="1">
-                                    阿里巴巴
-                                </a>
-                            
-        				
-                            
-                				<a href="/tags/#前端开发" title="前端开发" rel="4">
+                				<a href="/tags/#前端开发" title="前端开发" rel="2">
                                     前端开发
                                 </a>
                             
         				
                             
-                				<a href="/tags/#JavaScript" title="JavaScript" rel="3">
+                				<a href="/tags/#JavaScript" title="JavaScript" rel="2">
                                     JavaScript
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#转载" title="转载" rel="2">
+                                    转载
                                 </a>
                             
         				
@@ -363,20 +290,14 @@ Hux 的 Blog 就这么开通了。
                             
         				
                             
-                				<a href="/tags/#知乎" title="知乎" rel="1">
-                                    知乎
+                				<a href="/tags/#小说" title="小说" rel="1">
+                                    小说
                                 </a>
                             
         				
                             
-                				<a href="/tags/#iOS" title="iOS" rel="1">
-                                    iOS
-                                </a>
-                            
-        				
-                            
-                				<a href="/tags/#译文" title="译文" rel="1">
-                                    译文
+                				<a href="/tags/#自行车" title="自行车" rel="1">
+                                    自行车
                                 </a>
                             
         				
@@ -454,27 +375,27 @@ Hux 的 Blog 就这么开通了。
 					<ul>
 						
 						<li>
-							<a href="http://lingyu.wang/">天镶的博客</a>
+							<a href="#">friend1的博客</a>
 						</li>
 						
 						<li>
-							<a href="http://hmqk1995.github.io">Luke的自留地</a>
+							<a href="#">friend2的博客</a>
 						</li>
 						
 						<li>
-							<a href="http://blog.smdcn.net">SmdCn's Blog</a>
+							<a href="#">friend3的博客</a>
 						</li>
 						
 						<li>
-							<a href="http://xieminis.me/">解旻的博客</a>
+							<a href="#">friend4的博客</a>
 						</li>
 						
 						<li>
-							<a href="http://dhong.co">DHong Say</a>
+							<a href="#">friend5的博客</a>
 						</li>
 						
 						<li>
-							<a href="http://ingf.github.io/">尹峰以为</a>
+							<a href="#">friend6的博客</a>
 						</li>
 						
 					</ul>

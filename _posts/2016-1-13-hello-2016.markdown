@@ -3,11 +3,13 @@ layout:           post
 title:           "Hello 2016"
 subtitle:        "A new stage begin"
 author:          "BING"
-header-img:      "img/post-2016-begin.jpg"
+header-img:      "img/exercise-bg.jpg"
+thumb-img:       "img/thumbnail/exercise-th.jpg"
 #categories: Life
 tags:
     - 生活
 ---
+post-permisstion: true
 
 > 好吧，2016年终于开通了自己的blog
 
@@ -56,5 +58,6 @@ LOL! 后来发现了是我的repo的命名问题，必须是和Github用户名�
 [Github Pages](https://pages.github.com/)
 
 
->  2016 A new begin!        End! ——2016.1.13 by BING
+>  2016 A new beginning!
+>  End! ——2016.1.13 by BING
 

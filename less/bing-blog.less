@@ -1,6 +1,5 @@
 @import "variables.less";
 @import "mixins.less";
-// @import "sidebar.less";
 
 //Global Components
 
@@ -49,13 +48,6 @@ a {
          -o-transition:color 0.5s ease-in;
           -moz-transition:color 0.5s ease-in;
           -webkit-transition:color 0.5s ease-in;
-	}
-}
-
-a img{
-	&:hover,
-	&:focus{
-		cursor: zoom-in;
 	}
 }
 
@@ -542,10 +534,10 @@ pre code{
     }
 }
 
-// BING change layout add thumbnail
+// BING changes layout and adds thumbnail
 
 .thumb{
-	> img{
+	 img{
 	   @media only screen and (min-width:768px){
 	   margin-top:50px;   //hack to make img middle,it is bad method 
 	   }
